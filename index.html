@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width , initial-scale=1.0">
+  <title>Bharat Search 
+  </title>
 
+
+    <style>
+      body {
+        font-family:Arial ,sans-serif;
+        background: #f5f8f5;
+        text-align: center;
+        padding: 50px 16px;
+        
+      }
+
+      h1 {
+        color: #138447;
+        font-size: 34px;
+      }
+      .flag {
+        font-size: 28px;
+      }
+      input {
+        width:85℅;
+        max-width:420px;
+        padding: 14px;
+        border:1px solid #bbb;
+        border-radius: 25px;
+        font-size: 16px;
+        box-sizing: border-box;
+      
+      
+      }
+
+
+      button {
+        margin-top: 16px;
+        padding: 12px 35px
+        background:#138447;
+        color:white;
+        border-radius:25pc;
+        font-size:17px;
+        
+      }
+      p {
+        color:#555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flag">Tiranga
+    </div>
+    <h1>Bharat Search</h1>
+    <p>Bharat ka apna search app</p>
+
+    <input id="searchBox"
+    type="text"
+           placeholder="yaha kuchh khoje...">
+
+    <br>
+
+    <button
+      onclick="searchNow()">SEARCH
+    </button>
+
+    <script>
+      function searchNow() {
+      
+         let query= document.getElementById("searchBox").value.trim();
+
+         if (query === "") {
+           alert("pahle kuchh likhiye");
+
+           return;
+         }
+         window.location.href ="https://www.google.com/search?q=" +
+          encodeURIComponent(query);
+      
+        
+      }
+
+      document.getElementById("serchBox")
+            .addEventListener("keydown" , function(event) {
+             if (event.key==="Enter") {
+              searchNow();
+            }
+      });
+      
+      
+    </script>   
+</body>
+</html>
